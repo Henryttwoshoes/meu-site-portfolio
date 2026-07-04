@@ -1,0 +1,334 @@
+/* Reset básico e configurações de fontes */
+@import url(support.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: var(--cor4); /* Cor roxa/vinho escura de fundo */
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-family: 'Figtree', sans-serif;
+}
+
+/* 1. Navbar Estilizada */
+.navbar {
+    background-color: var(--cor4);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--cor4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar nav ul li a {
+    color: var(--cor1);
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 600;
+    transition: color 0.3s;
+    font-family: 'Figtree', serif;
+}
+
+.navbar nav ul li a:hover, 
+.navbar nav ul li a.active {
+    color: var(--corDestaque); /* Tom amarelado/dourado ativo */
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon span {
+    background-color: #ffca36;
+    color: #000;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+}
+
+/* 2. Hero / Banner Section */
+.hero-section {
+    background-color: var(--cor5);
+    background-size: cover;
+    height: 98dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.main-title {
+    font-family: 'Figtree', serif;
+    font-size: 5.8rem;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.descricaoeu{
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    color: var(--cor1);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8)
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--cor3);
+    color: #ffffff;
+    padding: 12px 35px;
+    text-decoration: none;
+    border: 2px solid var(--cor1);
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--cor1);
+    color: var(--cor3)
+}
+
+/* 3. About Section */
+.about-section {
+    background-color: var(--cor4);
+    padding: 80px 10%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    z-index: 2;
+}
+
+.about-text {
+    flex: 1;
+
+}
+
+.about-text h2 {
+    font-family: 'Figtree', serif;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffca36;
+}
+
+.subtitle {
+    font-style: italic;
+    color: var(--corDestaque);
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.reviews {
+    border-left: 3px solid var(--corDestaque2);
+    padding-left: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: var(--corDestaque);
+}
+
+/* Perfil Circular */
+.about-image {
+    flex: 0 0 300px;
+}
+
+.profile-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid var(--corDestaque2);
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Elementos visuais das bandeiras laterais (conforme imagens) */
+.banner-decor {
+    position: absolute;
+    top: 0;
+    height: 150px;
+    display: flex;
+    gap: 10px;
+}
+.left-banners { left: 20px; }
+.right-banners { right: 20px; }
+
+.banner-item {
+    width: 40px;
+    height: 120px;
+    background-color: #ccc;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    opacity: 0.7;
+}
+.red-gold { background: linear-gradient(#b81d24, #dda15e); }
+.gold { background: #dda15e; }
+.green { background: #606c38; }
+.blue { background: #0077b6; }
+
+
+/* 4. Contact Section */
+.contact-section {
+    background-color: var(--cor2); /* Cor rosa claro de transição no fundo externo */
+    padding: 60px 0 0 0;
+}
+
+.contact-container {
+    display: flex;
+    background-color: var(--cor3); /* Caixa interna volta ao vinho */
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.contact-form-wrapper {
+    flex: 1;
+    padding: 50px;
+}
+
+.contact-form-wrapper h2 {
+    font-family: 'Figtree', serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-form-wrapper p, .po-box {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--cor1);
+}
+
+.po-box {
+    display: block;
+    font-style: normal;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Inputs do Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 3px solid var(--cor1);
+    border-bottom: 3px solid var(--corDestaque);
+    padding: 10px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--corDestaque);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.submit-btn {
+    background-color: var(--cor1);
+    color: var(--cor3);
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #fff;
+}
+
+/* Imagem lateral direita no formulário */
+.contact-image-side {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=1000') no-repeat center center; /* Troque pela imagem do castelo */
+    background-size: cover;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .about-container, .contact-container {
+        flex-direction: column;
+    }
+    .main-title {
+        font-size: 2.5rem;
+    }
+    .contact-image-side {
+        height: 300px;
+    }
+    .banner-decor { display: none; }
+}

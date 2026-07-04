@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henryttwoshoes</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Início</a></li>
+                <li><a href="#">Meus Trabalhos</a></li>
+                <li><a href="#">RPG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="main-title">Henryttwoshoes</h1>
+            <h2 class="descricaoeu">Um internauta criador</h2>
+            <a href="#about" class="cta-button" onclick="scrollToSection1(event)">Ver sobre mim</a>
+        </div>
+    </section>
+
+    
+    <section class="about-section" id="about">
+        <!-- <div class="banner-decor left-banners">
+            <div class="banner-item red-gold"></div>
+            <div class="banner-item gold"></div>
+        </div> -->
+
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Me</h2>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-patreon"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+
+                <p class="subtitle">World leading D&D Scientist and map maker (probably).</p>
+                <p>In 2022 I graduated with a Masters in Astrophysics and <em>panicked</em>. In my panic, I decided to combine my love of D&D 5e and data analysis and create <em>The Theory of Magic</em>. Since then, I have written more and more 5e science analysis that has been given such reviews as:</p>
+                <blockquote class="reviews">
+                    "Well that's interesting", "People buy this S***?", and "Magic? Like card tricks?"
+                </blockquote>
+                <p>I also make maps for my games and share them here when I can.</p>
+                <p>Thank you everyone for your support, patience, and just general good will. If you want to support my work, feel free to go to my patreon (the leftmost button).</p>
+            </div>
+
+            <div class="about-image">
+                <div class="profile-circle">
+                    <img src="estilos/imagens/minha foto bolinha.png" alt="Avatar do Gorila">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="banner-decor right-banners">
+            <div class="banner-item green"></div>
+            <div class="banner-item blue"></div>
+        </div> -->
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form-wrapper">
+                <h2>Entre em Contato</h2>
+                <p>Before filling this out please read the FAQs, in case I've already answered your question. I try to read every message but as with all things, it's impossible for me to keep up so apologies if I miss something!</p>
+                
+                <p>I also have a PO Box if you're so inclined.<br>You may address mail to:</p>
+                <address class="po-box">
+                    <strong>Gorilla of Destiny,</strong><br>
+                    61 Bridge Street<br>
+                    Kingston<br>
+                    HR5 3DJ
+                </address>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Add answer here"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar</button>
+                </form>
+            </div>
+
+            <div class="contact-image-side"></div>
+        </div>
+    </section>
+    <script src="Programação/home.js"></script>
+
+</body>
+</html>
