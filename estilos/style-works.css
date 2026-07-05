@@ -1,0 +1,330 @@
+/* Definição das suas variáveis de cores integradas */
+@import url(support.css);
+
+:root {
+    --cor1: #F2F2F2;
+    --cor2: #141926;
+    --cor3: #281A75;
+    --cor4: #1A1440;
+    --cor5: #261A73;
+
+    --cor3a: #281a757e;
+
+    --corDestaque: #9046ff;
+    --corDestaque2: #5d00ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: var(--cor4); /* Fundo muito escuro */
+    color: var(--cor1); /* Texto claro */
+    overflow-x: hidden;
+}
+
+
+
+/* Navbar Baseada na sua Home */
+.navbar {
+    background-color: var(--cor4);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--cor4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.navbar nav ul li a {
+    color: var(--cor1);
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 600;
+    transition: color 0.3s;
+    font-family: 'Figtree', serif;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+    color: var(--corDestaque);
+}
+
+/* Cabeçalhos de Seção */
+.section-title-container {
+    text-align: center;
+    padding: 60px 20px 60px 20px;
+    background: linear-gradient(180deg, var(--cor2) 0%, var(--cor4) 100%);
+
+    & h2 {
+        font-size: 2.3rem;
+        margin-bottom: 20px;
+    }
+}
+
+.section-title-container h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: var(--cor1);
+}
+
+.subtitle {
+    color: var(--corDestaque);
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/* Grids Gerais */
+.grid-container {
+    display: grid;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+    padding-bottom: 80px;
+}
+
+/* Grid de Livros Principais (4 colunas) */
+.books-grid {
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 80px;
+    justify-content: center; /* Centraliza o grid inteiro horizontalmente */
+    /*justify-items: center; */
+}
+
+/* Estrutura dos Cards (Design limpo com bordas inferiores brancas como na referência) */
+
+
+
+.card-item {
+    background-color: var(--cor2);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+    max-width: 270px;
+    max-height: 507px;
+
+    flex: 1 1 250px; /* Mantém o tamanho mínimo de 250px, igual ao minmax */
+    max-width: 270px;
+
+    & a {
+        text-decoration: none;
+        color: var(--cor2);
+    
+    }
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px var(--cor3a);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    background-color: var(--cor4);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Selos sobre as capas */
+.badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background-color: var(--corDestaque);
+    color: var(--cor1);
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.card-info {
+    background-color: #ffffff; /* Fundo branco para o texto da legenda interna igual ao site */
+    padding: 15px;
+    text-align: center;
+    height: 100%;
+
+    
+
+    & p {
+        margin-top: 5px;
+        color: var(--cor2);
+        font-size: 0.9rem;
+    }
+}
+
+.card-info h3 {
+    color: var(--cor2);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+/* --- Seção de Compêndios Secundários (Fundo Claro em contraste) --- */
+.compendiums-section {
+    background-color: var(--cor1); /* Inversão para o tom claro */
+    color: var(--cor4);
+    padding: 80px 5% 100px 5%;
+    position: relative;
+}
+
+.compendiums-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.compendiums-header h2 {
+    font-size: 2.2rem;
+    color: var(--cor4);
+}
+
+.compendiums-header p {
+    color: var(--cor5);
+    font-size: 14px;
+}
+
+.compendiums-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Brasão de decoração lateral esquerda */
+.side-crest-decor {
+    flex: 0 0 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120px;
+    color: rgba(40, 26, 117, 0.15); /* Marca d'água usando a --cor3 */
+    padding-top: 20px;
+}
+
+.sub-grid {
+    flex: 1 1 300px; /* Altera de 'flex: 1' para permitir uma base de cálculo (300px) */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 0;
+    width: 100%;
+}
+
+/* Sub-Cards (Glifos de Linha Mágica) */
+.sub-card {
+    background-color: var(--cor1);
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s;
+}
+
+.sub-card:hover {
+    border-color: var(--corDestaque);
+}
+
+.sub-card-graphic {
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea; /* Fundo levemente diferenciado do canvas */
+    position: relative;
+}
+
+/* Círculos e linhas simulando os glifos geométricos das imagens */
+.glyph-circle {
+    width: 140px;
+    height: 140px;
+    border: 2px solid var(--cor3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: var(--cor3);
+    position: relative;
+}
+
+/* Variação de linhas cruzadas simulando geometria rúnica */
+.grid-lines::before {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 2px;
+    background: var(--cor5);
+    transform: rotate(45deg);
+}
+
+.sub-card-footer {
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.sub-card-footer h4 {
+    color: var(--cor4);
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.sub-card-footer span {
+    color: #777;
+    font-size: 11px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .compendiums-container {
+        flex-direction: column;
+    }
+    .side-crest-decor {
+        display: none;
+    }
+    .section-title-container h1 {
+        font-size: 2.3rem;
+        margin-bottom: 30px;
+    }
+
+    .section-title-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-item {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
