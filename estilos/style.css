@@ -161,7 +161,7 @@ h2 {
 }
 
 .social-icons a:hover {
-    color: #ffca36;
+    color: var(--corDestaque);
 }
 
 .subtitle {
@@ -193,7 +193,7 @@ h2 {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    border: 5px solid var(--corDestaque2);
+    border: 5px solid #2e11ed;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
@@ -231,7 +231,7 @@ h2 {
 
 /* 4. Contact Section */
 .contact-section {
-    background-color: var(--cor2); /* Cor rosa claro de transição no fundo externo */
+    background-color: var(--cor1); /* Cor rosa claro de transição no fundo externo */
     padding: 60px 0 0 0;
 }
 
