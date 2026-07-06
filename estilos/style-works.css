@@ -322,6 +322,10 @@ body {
     font-weight: 400;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .compendiums-container {

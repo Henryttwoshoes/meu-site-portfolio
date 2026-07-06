@@ -14,3 +14,8 @@
     --corDestaque2: #5d00ff;
 }
 
+strong {
+    font-weight: 550;
+    color: var(--corDestaque);
+}
+
