@@ -326,6 +326,27 @@ a {
     text-decoration: none;
 }
 
+
+
+.youtube {
+    display: flex;
+    align-items: center;    /* centra verticalmente */
+    justify-content: center;
+    text-align: center;
+    background-color: var(--cor4);
+    background: linear-gradient(180deg, var(--cor2) 0%, var(--cor4) 100%);
+    padding: 100px 10%;
+    padding-bottom: 150px;
+
+    height: 80dvh;
+
+    & h1 {
+        margin: 0;
+        font-size: 3.5rem;
+        color: var(--cor1);
+    }
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .compendiums-container {
@@ -352,5 +373,12 @@ a {
         width: 370px;
         height: 507px;
         
+    }
+
+    .youtube h1{
+        font-size: 2rem;
+        margin-top: 10%;
+        margin-bottom: 20px;
+        color: var(--cor1)
     }
 }
