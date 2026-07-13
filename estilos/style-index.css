@@ -249,7 +249,7 @@ h2 {
 
 .contact-container {
     display: flex;
-    background-color: var(--cor3); /* Caixa interna volta ao vinho */
+    background-color: var(--cor5); /* Caixa interna volta ao vinho */
     max-width: 1200px;
     margin: 0 auto;
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
@@ -329,8 +329,8 @@ h2 {
 /* Imagem lateral direita no formulário */
 .contact-image-side {
     flex: 1;
-    background: url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=1000') no-repeat center center; /* Troque pela imagem do castelo */
-    background-size: cover;
+    background: url('imagens/henry_foda.png') no-repeat right center; /* Troque pela imagem do castelo */
+    background-size: contain;
 }
 
 
