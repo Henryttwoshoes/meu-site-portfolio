@@ -1,0 +1,19 @@
+@import url(support.css);
+@import url(style-index.css);
+
+body {
+    margin: auto;
+}
+
+main {
+    background-color: var(--cor4);
+    padding: 80px 10%;
+    position: relative;
+    box-sizing: border-box;
+
+    & h1, p {
+        text-align: center;
+        margin: auto;
+        display: block;
+    } 
+}
