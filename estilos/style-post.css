@@ -1,0 +1,210 @@
+@import url(support.css);
+
+
+/* --- Banner do Post (Hero) --- */
+.post-hero {
+    background: linear-gradient(rgba(20, 25, 38, 0.8), rgba(20, 25, 38, 0.8)), url('https://via.placeholder.com/1920x800/1A1440/9046ff?text=Capa+do+Artigo') no-repeat center center;
+    background-size: cover;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 100px 20px; /* Padding inferior maior para dar espaço ao card flutuante */
+}
+
+.hero-overlay {
+    max-width: 800px;
+}
+
+.post-badge {
+    background-color: var(--corDestaque);
+    color: var(--cor1);
+    padding: 6px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.post-hero h1 {
+    font-size: 3rem;
+    color: var(--cor1);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.post-hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.post-hero-meta i {
+    color: var(--corDestaque);
+    margin-right: 5px;
+}
+
+/* --- Contêiner de Leitura Flutuante --- */
+.single-post-container {
+    background-color: var(--cor1);
+    color: var(--cor2);
+    max-width: 900px; /* Mais estreito que o blog principal para conforto de leitura */
+    margin: -120px auto 80px auto;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    padding: 60px 80px;
+    position: relative;
+    z-index: 10;
+}
+
+/* --- Formatação do Texto do Artigo --- */
+.post-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333; /* Cinza bem escuro para leitura no fundo claro */
+}
+
+.post-body p {
+    margin-bottom: 25px;
+}
+
+.post-body h2 {
+    font-size: 1.8rem;
+    color: var(--cor4);
+    margin: 40px 0 20px 0;
+}
+
+.post-body ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.post-body li {
+    margin-bottom: 10px;
+}
+
+/* Citação (Blockquote) estilizada */
+.post-body blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--cor3);
+    border-left: 5px solid var(--corDestaque);
+    padding: 20px;
+    margin: 40px 0;
+    background-color: rgba(144, 70, 255, 0.05); /* Fundo levíssimo com a cor de destaque */
+    border-radius: 0 8px 8px 0;
+}
+
+/* Imagens dentro do post */
+.content-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Rodapé do Post (Tags e Share) --- */
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.post-tags a {
+    display: inline-block;
+    background-color: var(--cor2);
+    color: var(--cor1);
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+
+.post-tags a:hover {
+    background-color: var(--corDestaque);
+}
+
+.post-share {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.post-share a {
+    color: var(--cor3);
+    font-size: 1.2rem;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.post-share a:hover {
+    color: var(--corDestaque);
+}
+
+/* --- Caixa do Autor --- */
+.author-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.author-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--corDestaque);
+}
+
+.author-info h3 {
+    font-size: 1.2rem;
+    color: var(--cor4);
+    margin-bottom: 5px;
+}
+
+.author-info p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .post-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .single-post-container {
+        margin: -80px 15px 40px 15px;
+        padding: 40px 20px;
+    }
+    
+    .post-footer {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .author-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
