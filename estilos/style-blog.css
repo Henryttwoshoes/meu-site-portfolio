@@ -1,0 +1,253 @@
+@import url(support.css);
+
+:root {
+    --cor1: #F2F2F2;
+    --cor2: #141926;
+    --cor3: #281A75;
+    --cor4: #1A1440;
+    --cor5: #261A73;
+    --cor3a: #281a757e;
+    --corDestaque: #9046ff;
+    --corDestaque2: #5d00ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor4); /* Fundo escuro atrás do conteúdo principal */
+    color: var(--cor1);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--cor2);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.navbar nav ul li a {
+    color: var(--cor1);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+    color: var(--corDestaque);
+}
+
+/* --- Hero Section (Banner do Blog) --- */
+.blog-hero {
+    /* Use uma imagem de fundo criativa aqui */
+    background: linear-gradient(rgba(20, 25, 38, 0.7), rgba(20, 25, 38, 0.7)), url('https://via.placeholder.com/1920x600/1A1440/9046ff?text=Arte+de+Fundo') center/cover;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 80px; /* Sobe o texto para dar espaço ao bloco flutuante */
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: var(--cor1);
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    font-weight: 700;
+}
+
+/* --- Container Principal Flutuante --- */
+.blog-container {
+    background-color: var(--cor1); /* Fundo claro como no Gildedguy */
+    color: var(--cor2); /* Texto escuro para ler no fundo claro */
+    max-width: 1200px;
+    margin: -150px auto 80px auto; /* Margem negativa no topo cria o efeito de sobreposição */
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    display: flex;
+    gap: 50px;
+    padding: 60px 50px;
+    position: relative;
+    z-index: 10;
+}
+
+/* --- Área de Posts (Esquerda) --- */
+.blog-posts {
+    flex: 1; /* Ocupa o espaço restante */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Card Individual de Post */
+.post-card {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.post-thumbnail {
+    flex: 0 0 320px; /* Largura fixa para a imagem */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.post-thumbnail:hover {
+    transform: translateY(-3px);
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.post-content {
+    flex: 1;
+}
+
+.post-category {
+    color: var(--corDestaque);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.post-content h2 a {
+    color: var(--cor2);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.post-content h2 a:hover {
+    color: var(--corDestaque2);
+}
+
+.post-excerpt {
+    color: #555; /* Cinza escuro para melhor leitura no fundo claro */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.post-meta {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.post-meta strong {
+    color: var(--cor2);
+}
+
+/* --- Sidebar (Direita) --- */
+.blog-sidebar {
+    flex: 0 0 300px; /* Largura fixa da sidebar */
+}
+
+.widget {
+    margin-bottom: 40px;
+}
+
+.widget h3 {
+    font-size: 1.2rem;
+    color: var(--cor4);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+}
+
+.categories-widget ul, 
+.comments-widget ul {
+    list-style: none;
+}
+
+.categories-widget ul li {
+    margin-bottom: 15px;
+}
+
+.categories-widget ul li a {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    transition: color 0.3s;
+}
+
+.categories-widget ul li a:hover {
+    color: var(--corDestaque);
+}
+
+.categories-widget ul li a span {
+    color: #aaa; /* Cor dos números de contagem */
+    font-size: 0.85rem;
+}
+
+.comments-widget ul li {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.comments-widget ul li strong {
+    color: var(--cor3);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+    .blog-container {
+        flex-direction: column; /* Joga a sidebar para baixo */
+        padding: 40px 30px;
+        margin-top: -100px;
+    }
+    
+    .blog-sidebar {
+        flex: none;
+        width: 100%;
+        border-top: 2px solid rgba(0,0,0,0.05);
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .post-card {
+        flex-direction: column; /* Imagem fica em cima do texto no celular */
+        gap: 20px;
+    }
+    
+    .post-thumbnail {
+        flex: none;
+        width: 100%;
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Meus Trabalhos</title>
+    <link rel="stylesheet" href="estilos/style-blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Padrão -->
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Meus Trabalhos</a></li>
+                <li><a href="#" class="active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Banner com a frase de efeito) -->
+    <section class="blog-hero">
+        <div class="hero-text">
+            <h1>Criações brilhantes feitas com o coração.</h1>
+        </div>
+    </section>
+
+    <!-- Container Principal Flutuante (Inspirado no Gildedguy) -->
+    <main class="blog-container">
+        
+        <!-- Coluna Esquerda: Lista de Posts -->
+        <div id="blog-posts" class="blog-posts">
+            
+            <!-- Post 1 -->
+            <!-- <article class="post-card">
+                <div class="post-thumbnail">
+                    <img src="https://via.placeholder.com/400x250/1A1440/9046ff?text=Imagem+do+Post" alt="Thumbnail do Post">
+                </div>
+                <div class="post-content">
+                    <span class="post-category">ANIMAÇÃO</span>
+                    <h2><a href="#">O Novo Projeto já está no Ar!</a></h2>
+                    <p class="post-excerpt">Aqui vai um resumo do post sobre a produção mais rápida que tive em muito tempo! Vou falar sobre a abordagem que foi tomada, algumas técnicas novas e como tudo aconteceu. Junte-se a mim neste mergulho rápido...</p>
+                    <div class="post-meta">
+                        Por <strong>Seu Nome</strong>, há 2 meses
+                    </div>
+                </div>
+            </article> -->
+
+            <!-- Post 2 -->
+            <!-- <article class="post-card">
+                <div class="post-thumbnail">
+                    <img src="" alt="Thumbnail do Post">
+                </div>
+                <div class="post-content">
+                    <span class="post-category"></span>
+                    <h2><a href="#"></a></h2>
+                    <p class="post-excerpt"></p>
+                    <div class="post-meta">
+                    </div>
+                </div>
+            </article> -->
+
+        </div>
+
+        <!-- Coluna Direita: Sidebar -->
+        <aside class="blog-sidebar">
+            
+            <!-- Widget de Categorias -->
+            <div class="widget categories-widget">
+                <h3>Categorias do Blog</h3>
+                <ul>
+                    <li><a href="#">Animação <span>(43)</span></a></li>
+                    <li><a href="#">Desenvolvimento de Jogos <span>(15)</span></a></li>
+                    <li><a href="#">Motivação <span>(15)</span></a></li>
+                    <li><a href="#">RPG & D&D <span>(22)</span></a></li>
+                    <li><a href="#">Sem categoria <span>(1)</span></a></li>
+                    <li><a href="#">Coisas do Site <span>(6)</span></a></li>
+                    <li><a href="#">Trabalho em Progresso <span>(5)</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Widget de Comentários (Opcional, presente na referência) -->
+            <div class="widget comments-widget">
+                <h3>Últimos Comentários</h3>
+                <ul>
+                    <li><strong>Usuário1</strong> em <em>O Novo Projeto...</em></li>
+                    <li><strong>Player2</strong> em <em>História #9...</em></li>
+                </ul>
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <script>async function carregarPosts() {
+  try {
+    // 1. Busca o arquivo JSON
+    const resposta = await fetch('post.json');
+    const posts = await resposta.json();
+
+    // 2. Encontra o container no HTML onde os posts vão ficar
+    const container = document.getElementById('blog-posts');
+
+    // 3. Limpa o container (boa prática)
+    container.innerHTML = '';
+
+    // 4. Percorre cada post e cria o HTML usando Template Literals (Crase)
+    posts.forEach(post => {
+      const postHTML = `
+        <article class="post-card">
+                <div class="post-thumbnail">
+                    <img src="${post.imagem_capa}" alt="Thumbnail do Post">
+                </div>
+                <div class="post-content">
+                    <span class="post-category">${post.categoria}</span>
+                    <h2><a href="#">${post.titulo}</a></h2>
+                    <p class="post-excerpt">${post.resumo}</p>
+                    <div class="post-meta">
+                    </div>
+                </div>
+            </article>
+
+      `;
+      // Adiciona o HTML gerado dentro do container
+      container.innerHTML += postHTML;
+    });
+
+  } catch (erro) {
+    console.error("Erro ao carregar os posts:", erro);
+  }
+}
+
+// Executa a função quando a página carrega
+carregarPosts();
+</script>
+</body>
+</html>

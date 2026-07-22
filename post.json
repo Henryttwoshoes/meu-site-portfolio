@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "titulo": "Meu Primeiro Post",
+    "data": "2026-07-22",
+    "resumo": "Neste post, explico como comecei a programar.",
+    "categoria": "Vida",
+    "imagem_capa": "posts/capas/capa sample.png"
+  }
+  
+
+
+
+]
