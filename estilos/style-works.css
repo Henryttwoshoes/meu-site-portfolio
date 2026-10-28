@@ -380,7 +380,11 @@ a {
 
     .sub-card-graphic {
         width: 370px;
-        height: 507px;
+        height: 468px;
+
+        & img {
+            width: 91%;
+        }
         
     }
 
